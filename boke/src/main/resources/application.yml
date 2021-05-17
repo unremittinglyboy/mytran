@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+server:
+  port: 8080
+
+#comment.avatar: /images/avatar.png
+
+

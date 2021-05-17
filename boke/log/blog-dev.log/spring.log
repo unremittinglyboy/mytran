@@ -1,0 +1,36 @@
+2021-05-17 21:30:19.386  INFO 11856 --- [restartedMain] com.example.boke.BokeApplication         : Starting BokeApplication using Java 1.8.0_40 on LAPTOP-TDK8A0I0 with PID 11856 (E:\开源项目\boke\target\classes started by 桁仔 in E:\开源项目\boke)
+2021-05-17 21:30:19.386 DEBUG 11856 --- [restartedMain] com.example.boke.BokeApplication         : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-05-17 21:30:19.386  INFO 11856 --- [restartedMain] com.example.boke.BokeApplication         : The following profiles are active: dev
+2021-05-17 21:30:19.436  INFO 11856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-17 21:30:19.436  INFO 11856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-17 21:30:20.066  INFO 11856 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-17 21:30:20.136  INFO 11856 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 5 JPA repository interfaces.
+2021-05-17 21:30:20.736  INFO 11856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-17 21:30:20.736  INFO 11856 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-17 21:30:20.746  INFO 11856 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-05-17 21:30:20.826  INFO 11856 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-17 21:30:20.826  INFO 11856 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1390 ms
+2021-05-17 21:30:21.016  INFO 11856 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-17 21:30:21.066  INFO 11856 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-05-17 21:30:21.176  INFO 11856 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-17 21:30:21.256  INFO 11856 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-05-17 21:30:21.566  INFO 11856 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-05-17 21:30:21.576  INFO 11856 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-05-17 21:30:22.236  INFO 11856 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-17 21:30:22.246  INFO 11856 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-17 21:30:22.286  INFO 11856 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-05-17 21:30:22.976  WARN 11856 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-17 21:30:23.106  INFO 11856 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-17 21:30:23.366  INFO 11856 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-05-17 21:30:23.646  INFO 11856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-17 21:30:23.656  INFO 11856 --- [restartedMain] com.example.boke.BokeApplication         : Started BokeApplication in 4.726 seconds (JVM running for 8.243)
+2021-05-17 21:31:05.408  INFO 11856 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-17 21:31:05.408  INFO 11856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-17 21:31:05.410  INFO 11856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-05-17 21:31:05.443  INFO 11856 --- [http-nio-8080-exec-1] com.example.boke.Aspect.LogAspect        : Request : RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='class com.example.boke.Controller.IndexController.com.example.boke.Controller.IndexController', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
+2021-05-17 21:31:05.528  WARN 11856 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-05-17 21:31:05.541  INFO 11856 --- [http-nio-8080-exec-1] com.example.boke.Aspect.LogAspect        : Result : index
+2021-05-17 21:31:05.541  INFO 11856 --- [http-nio-8080-exec-1] com.example.boke.Aspect.LogAspect        : --------------doAfter-------------
+2021-05-17 21:31:25.749  INFO 11856 --- [http-nio-8080-exec-6] com.example.boke.Aspect.LogAspect        : Request : RequestLog{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='class com.example.boke.Controller.IndexController.com.example.boke.Controller.IndexController', args=[Page request [number: 0, size 10, sort: updateTime: DESC], {}]}
+2021-05-17 21:31:25.772  INFO 11856 --- [http-nio-8080-exec-6] com.example.boke.Aspect.LogAspect        : Result : index
+2021-05-17 21:31:25.772  INFO 11856 --- [http-nio-8080-exec-6] com.example.boke.Aspect.LogAspect        : --------------doAfter-------------

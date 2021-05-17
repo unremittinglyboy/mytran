@@ -1,0 +1,4 @@
+2021-04-19 21:15:17.162  INFO 9964 --- [restartedMain] com.example.boke.BokeApplication         : Starting BokeApplication using Java 1.8.0_40 on LAPTOP-TDK8A0I0 with PID 9964 (E:\开源项目\boke\target\classes started by 桁仔 in E:\开源项目\boke)
+2021-04-19 21:15:17.165  INFO 9964 --- [restartedMain] com.example.boke.BokeApplication         : The following profiles are active: pro
+2021-04-19 21:15:19.455  WARN 9964 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-19 21:15:19.836  INFO 9964 --- [restartedMain] com.example.boke.BokeApplication         : Started BokeApplication in 3.271 seconds (JVM running for 5.679)

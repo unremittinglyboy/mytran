@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scaleable=0">
+    <title>标签新增</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/CSS/me.css">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
+</head>
+<body>
+
+<!--导航-->
+<nav th:replace="admin/_fragments :: menu(3)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">后台管理系统</h2>
+            <a href="#" class="m-item item m-mobile-hidden"><i class=" home icon"></i>博客</a>
+            <a href="#" class="m-item item m-mobile-hidden"><i class=" idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hidden"><i class=" tags icon"></i>标签</a>
+            <div class="right m-item m-mobile-hidden menu">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img src="https://picsum.photos/id/1/100/100?image=1005" alt="" class="ui avatar image">
+                        李尚融
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--menu toggle无显示意义，只是为了jQuery的获取-->
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show"><i class="sidebar icon"></i></a>
+</nav>
+<div class="ui attached pointing menu">
+    <div class="ui container">
+        <div class="right menu">
+            <a href="#" th:href="@{/admin/tags/input}" class="item">新增</a>
+            <a href="#" th:href="@{/admin/tags}" class="teal active item">列表</a>
+        </div>
+    </div>
+</div>
+
+<!--th:object $拿到Controller中的对象，然后th:value *得到该对象对属性-->
+
+<!--中间内容-->
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <form action="#" method="post" th:object="${tag}" th:action="@{/admin/tags}" class="ui form">
+            <div class="field">
+                <div class="ui left labeled input">
+                    <label class="ui teal basic label">名称</label>
+                    <input type="text" name="name" placeholder="分类名称" th:value="*{name}">
+                </div>
+            </div>
+            <div class="ui error message">
+            </div>
+
+            <!--/*/
+            <div class="ui negative message" th:if="${#fields.hasErrors('name')}"  >
+              <i class="close icon"></i>
+              <div class="header">Validation failed</div>
+              <p th:errors="*{name}">Input content not valid</p>
+            </div>
+             /*/-->
+
+            <div class="ui right aligned container">
+                <button type= "button" class="ui button" onclick="window.history.go(-1)">返回</button>
+                <button class="ui teal submit button">提交</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<br><br>
+<!--grid(网格)分为16份-->
+<!--底部footer-->
+<footer th:replace="admin/_fragments :: footer"  class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <img src="../../static/images/mycard.jpg" class="ui centered rounded image" alt="" style="width: 120px;"/>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事(User Story)</a>
+                    <a href="#" class="item">用户故事(User Story)</a>
+                    <a href="#" class="item">用户故事(User Story)</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email: 1582886207@qq.com</a>
+                    <a href="#" class="item">QQ: 1582886207</a>
+                    <a href="#" class="item">Telephone: 18520238565</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="m-text-thin m-text-spaced">Blog</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-tiny">这是我的个人博客，旨在分享一些图片、文章、技术。</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright...</p>
+    </div>
+</footer>
+
+<!--/*/<th:block th:replace="admin/_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+<script src="../../static/lib/editormd/editormd.min.js"></script>
+<script>
+    $('.menu.toggle').click(function () {
+        // 存在该样式则去除，无则加入
+        $('.m-item').toggleClass('m-mobile-hidden');
+    });
+    $('.ui.dropdown').dropdown({
+        on : 'hover'
+    });
+    //提示关闭
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade');
+        });
+</script>
+</body>
+</html>
